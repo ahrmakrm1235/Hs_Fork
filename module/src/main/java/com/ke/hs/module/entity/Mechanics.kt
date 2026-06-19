@@ -412,7 +412,9 @@ enum class Mechanics {
 
     STARSHIPPIECE,
 
-    STARSHIP
+    STARSHIP,
+
+    Unknown
 }
 
 
@@ -421,7 +423,7 @@ class MechanicsAdapter {
     @FromJson
     fun fromJson(value: String): Mechanics {
 
-        return EnumMoshiAdapter.fromJson(value, Mechanics.values())
+        return EnumMoshiAdapter.fromJson(value, Mechanics.values(), Mechanics.Unknown)
 
     }
 
